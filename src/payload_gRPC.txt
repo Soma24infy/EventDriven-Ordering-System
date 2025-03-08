@@ -1,0 +1,16 @@
+{
+    "coupon": {
+        "productName": "New Iphone 15",
+        "description": "Description of new Iphone 15",
+        "amount": 200
+    }
+}
+
+{
+    "coupon": {
+        "id": 4,
+        "productName": "Updated Iphone 15",
+        "description": "Updated of new Iphone 15",
+        "amount": 200
+    }
+}
