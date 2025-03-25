@@ -9,11 +9,19 @@ namespace Ordering.Application.Orders.Eventhandlers.Integration
     {
         public async Task Consume(ConsumeContext<BasketCheckoutEvent> context)
         {
-            //create a new order and start order fulfillment process
-            logger.LogInformation("Integration event handled: {IntegrationEvent}",context.Message.GetType().Name);
+            try
+            {
+                //create a new order and start order fulfillment process
+                logger.LogInformation("Integration event handled: {IntegrationEvent}", context.Message.GetType().Name);
 
-            var command = MapToCreateOrderCommand(context.Message);
-            await sender.Send(command);
+                var command = MapToCreateOrderCommand(context.Message);
+                await sender.Send(command);
+            }
+            catch(System.Exception ex)
+            {
+                logger.LogError(ex, "Error processing Integration BasketCheckoutEvent: {Message}", context.Message);
+                throw;
+            }
         }
 
         private CreateOrderCommand MapToCreateOrderCommand(BasketCheckoutEvent message)
