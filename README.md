@@ -1,4 +1,4 @@
-# 🚀 EventDriven-Ordering-Microservices
+# 🚀 Ordering-Microservices
 
 A **scalable, event-driven microservices-based ordering system** built using **CQRS, Domain-Driven Design (DDD), Clean Architecture, and Vertical Slice Architecture**. This system ensures **high performance, modularity, and maintainability** while handling **distributed order processing efficiently**.
 
@@ -24,9 +24,8 @@ This system follows:
 | **RabbitMQ**  | Message broker for event-driven communication |
 | **Redis**  | Caching layer for performance optimization |
 | **MediatR**  | Implements CQRS with command and query handling |
-| **Docker & Kubernetes**  | Containerization and orchestration |
-| **Serilog**  | Structured logging |
-| **Grafana & Prometheus** | Monitoring & Observability |
+| **Docker** | Containerization and orchestration |
+
 
 ---
 
